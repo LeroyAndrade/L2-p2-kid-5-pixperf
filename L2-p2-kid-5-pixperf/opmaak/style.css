@@ -13,9 +13,15 @@ body{
 
 nav{
  position: fixed;
- display: flex;
- text-align: right;
+ right: 1vw;
+ top: 44%;
 }
+
+/*START Intersection*/
+.actief{
+ color: orange;
+}
+/*END Intersection*/
 
 section{
  background-size: 100vw;
