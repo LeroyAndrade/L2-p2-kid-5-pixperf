@@ -1,7 +1,38 @@
+//  Intersection observer  //
+
 //Wanneer een slide al actief is, verwijder je het, zodat de volgende sectie geactiveerd kan worden
 
+//Ieder link in het menu
+ //Ik kies hier bewust voor een volledige pad, zodat dit voorrang krijgt en niet wordt overwritten, door Bootstrap, wanneer ik daar ooit gebruik van maak.
 let navigatieLinks = document.querySelectorAll('nav li a');
 
+
+
+
+//De section in de HTML
+let alleSecties = document.querySelectorAll('section');
+
+
+//START IntersectionObserver //
+
+
+//
+ let opties = {};
+
+
+const doorsnee = (entries, observer) => {
+ entries.forEach( entry =>{
+  console.log(entry.target + "doorsnede " + entry.isIntersecting);
+ })
+}
+ //IntersectionObserver neemt twee argumenten --> https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver
+ let observeren = new IntersectionObserver(doorsnee, opties); 
+ observeren.observe(alleSecties[1]);
+
+//END IntersectionObserver // 
+
+
+// verwijder Actief navigatie class //
 const verwijderActiefNavigatieLink = () =>{
  navigatieLinks.forEach( (link) =>{
    //als er een classList is, verwijder die data
@@ -13,7 +44,7 @@ const verwijderActiefNavigatieLink = () =>{
  });
 }
 
-//actief class toevoegen
+// actief class toevoegen //
  const navigatieLinksActiefMaken = (elemen) => {
   verwijderActiefNavigatieLink();
   elemen.classList.add('actief');
