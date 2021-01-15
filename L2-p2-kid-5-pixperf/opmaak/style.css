@@ -41,20 +41,21 @@ section{
 .bold{ font-weight: bold; }
 .white{ color: #FFFFFF; }
 
-.font60{ font-size: 60px; }
 .font40{ font-size: 40px; }
-
+.font60{ font-size: 60px; }
 .font120{ font-size: 120px; }
 
 #slide1{ background-image: url(../docs/slide1/degrader1.png); }
 
 #slide2{ background-image: url(../docs/slide2/degrader2.png); }
 
-#slide3{ background-image: url(../docs/slide3/degrader3.png); }
+#slide3, #slide6{ background-image: url(../docs/slide3/degrader3.png); }
 
 #slide4{ background-image: url(../docs/slide4/degrader4.png); }
 
 #slide5{ background-image: url(../docs/slide5/degrader5.png); }
+
+/*Zelf maken?*/
 
 /* nog te verkrijgen van docent
 #slide6{ background-image: url(../docs/slide6/degrader6.png); }
