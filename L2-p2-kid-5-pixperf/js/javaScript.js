@@ -19,6 +19,7 @@ let alleSecties = document.querySelectorAll('section');
  const opties = {};
 
 const doorsnee = (entries, observer) => {
+ 
  entries.forEach( entry => {
 
   //De classen moeten gewisseld worden in dit veld
@@ -27,7 +28,7 @@ const doorsnee = (entries, observer) => {
      let link = zoekBijpassendeLink(entry.target.id);
      maakActief(link);
     }
-  console.log(entry.target.id + "doorsnede " + entry.isIntersecting);
+  console.log(entry.target.id + "doorsnede" + entry.isIntersecting);
  })
 }
  //IntersectionObserver neemt twee argumenten --> https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver
@@ -38,6 +39,12 @@ const doorsnee = (entries, observer) => {
   //deze code zorgt er ook voor dat er een false of true komt als resultaat van de isIntersecting in de console
  for (i =0; i < navigatieLinksNav__Item.length; i++){
   observeren.observe(alleSecties[i]);
+ }
+
+
+  //slideIdoorsnedetrue
+ if(entry.target.id){
+  document.getElementsById("#"+entry.target.id).classList = 'actief'
  }
 
 //END IntersectionObserver // 

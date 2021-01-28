@@ -27,8 +27,8 @@ section{
  background-size: 100vw;
  display: flex;
  text-align: center;
- min-height: 100vh;
- max-height: 100vh;
+ min-height: 101vh;
+ max-height: 101vh;
  max-width: 99vw;
 
  /*centreert content naar het midden van zijn inline-block regel*/
